@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body > h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50pt;
+    color: rgb(93, 92, 92);
+}
+
+/* Cards */
+.card-img-top {
+    object-fit: cover !important;
+    max-width: 300px;
+    max-height: 300px;
+    max-height: 300px;
+}
+
+div.card {
+    padding: 0 !important;
+    height: 450px !important;
+    max-width: 200px !important;
+}
+
+h5.card-title {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+}
+
+#sezione-libri {
+    gap: 1rem;
+    margin-left: 70px;
+}
+
+.list-group-item {
+    border-top: 1px solid rgb(201, 201, 201) !important;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+    z-index: 5;
+}
+  
+.card.fade-in {
+    opacity: 0;
+    animation: fadein 0.5s forwards;
+}
+
+
+/* Inizio stile elementi nel carrello */
+.btn-danger {
+    height: 40px;
+    width: 35px;
+}
+
+.offcanvas {
+    min-width: 300px !important;
+}
+
+.totale {
+    margin-left: 30px;
+}
+
+.btn-cart:hover {
+    color: #dadada !important;
+}
+
+.fa-trash-can {
+    background-color: #212529;
+    color: white;
+    font-size: 20pt;
+}
+
+.btn-cestino {
+    border: 0;
+    background-color: white;
+}
+
+.span-price {
+    color: rgb(66, 66, 66);
+    border-radius: 20px;
+    background-color: rgb(223, 223, 223);
+}
+
+.list-group-item.start-animation {
+    -webkit-animation: fadein 1.3s, slide-right .2s forwards;
+    transform: translateX(-100%);
+}
+
+.list-group-item.exit-animation {
+    -webkit-animation: fadeout .3s, slide-left .2s forwards;
+}
+
+@-webkit-keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+  
+@-webkit-keyframes slide-left {
+    to {transform: translateX(-150%);}
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
